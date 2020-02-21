@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="lists.js"></script>
+    
+    <link rel="stylesheet" href="lists.css">
+    <title>Suas boards</title>
+</head>
+<body>
+
+    <!-- navbar -->  
+    <nav class="navbar-light navbar navbar-expand-lg fixed-top ">  
+            <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">  
+            <span class="navbar-toggler-icon"><i class="fab fa-accusoft"></i></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">     
+        <ul class="navbar-nav mr-4">
+            <li class="nav-item">
+                <a class="nav-link" href="boards.html">Boards</a>
+            </li>  
+            <input name="" id="" class="btn btn-secondary" type="button" value="Logoff" onclick="logoff()">
+        </ul> 
+        </div>
+        
+    </nav>
+
+    <div class="corpo">
+        <div class="container-fluid nav-name-board">
+            <div class="row" style="padding:10px">
+                <h1 class="display-4 nomeBoard col-12 col-sm-6" id="nameBoard">Carregando...</h1>
+                <input type="text" class="form-control col-10 col-sm-5"  name="" id="newListText" aria-describedby="helpId" placeholder="Nova lista">
+                <input name="" id="" class="btn btn-primary col-2 col-sm-1" type="button" value="+" onclick="adicionarList()"> 
+            </div>
+        </div>
+
+            <div class="corpoLists"></div>
+         <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="container-fluid col-10">
+                                    <div class="row" id="renameCard">
+                                            <h4 id="nameModal" class="col-12" onclick="modRename()">Modal title</h4>
+                                    </div>
+
+                                    <div class="row invisible-add" id="formRenameCard">
+                                        <input type="text" class="col-10 form-control form-control-sm" id="inpRenameCard" maxlength="12">  
+                                        <input class="col-2 btn btn-success btn-board align-middle" id="btRenameCard"  type="button" value="&#x2611;" onclick='renameCard(event)'>
+                                    </div>
+                                </div>
+                                
+
+                                <button type="button" class="close col-2" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+
+                            <div class="row"  id="redateCard">
+                                <h6 class="col-12" id="dateModal" onclick="modRedate()"></h6>
+                            </div>
+
+                            <div class="row invisible-add"  id="formRedateCard">
+                                    <input type="date" class="col-8 form-control form-control-sm" id="inpRedateCard">  
+                                    <input class="col-2 btn btn-success btn-board align-middle" id="btRedateCard"  type="button" value="&#x2611;" onclick='redateCard(event)'>
+                            </div>
+
+
+
+
+                            <div class="row" style="padding: 0 0 0 15px;">
+                                <div class="form-check form-check-inline col-2 tag tag-off" chk="false" tagid="2" onclick="checkTag(event)" style="background-color: #b8daff;">Info</div>
+                                <div class="form-check form-check-inline col-2 tag tag-off" chk="false" tagid="12" onclick="checkTag(event)" style="background-color: #c3e6cb;">Success</div>
+                                <div class="form-check form-check-inline col-2 tag tag-off" chk="false" tagid="22" onclick="checkTag(event)" style="background-color: #f5c6cb;">Danger</div>
+                                <div class="form-check form-check-inline col-2 tag tag-off" chk="false" tagid="32" onclick="checkTag(event)" style="background-color: #ffeeba;">Warning</div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                           <div class="row">
+                               <h6>Comentarios:</h6>
+                           </div> 
+                           <div class="row">
+
+                                <ul class="list-group list-group-flush col-12" id="campoComents">
+                                    
+                                </ul>
+                                <div class="form-group col-12" style="margin-top: 15px;">
+                                    <div class="input-group mb-3">
+                                        <input type="text" id="inpComent" class="form-control" placeholder="Novo comentario..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-success" type="button"  id="btComent" onclick="comentar(event)">Comente</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+
+                   
+                </div>
+            </div>
+        </div> 
+
+        
+
+        <div class="modal fade" id="modalMoverCard" role="dialog">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="moverModalTitle">Modal Header</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  
+                </div>
+                <ul class="list-group" id="moverModalList">
+                    
+                </ul> 
+              </div>
+            </div>
+          </div>
+        
+    </div>
+       
+    
+
+    
+    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="boards.js"></script>
+    
+    <link rel="stylesheet" href="boards.css">
+    <title>Suas boards</title>
+</head>
+<body>
+
+    <!-- navbar -->  
+    <nav class="navbar-light navbar navbar-expand-lg fixed-top ">  
+            <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">  
+            <span class="navbar-toggler-icon"><i class="fab fa-accusoft"></i></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">     <ul class="navbar-nav mr-4">
+            <input name="" id="" class="btn btn-secondary" type="button" value="Logoff" onclick="logoff()">
+        </ul> 
+        </div>
+        
+    </nav>
+    
+
+    <div class="container corpo">
+        <div class="row">
+            <div class="col">
+                <h5 class="text-dark"> <span class="glyphicon">&#xe010;</span> Quadros pessoais</h5>
+            </div>
+          
+        </div>
+
+            <div class="row" id="quadroBoards">
+
+                <div class="col-6 col-lg-3 col-md-4 " data-toggle="modal" data-target="#exampleModalCenter">
+                    <div class="card bg-light text-primary board-adicionar">
+                        <div class="card-img-overlay form-group text">
+                            <h5 class="card-title" >Adicionar board</h5> 
+                        </div>
+                    </div> 
+                </div>
+
+
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Adicionar Board</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <form style="padding: 20px;" id="formAdicionarBoard" class="container-fluid">
+                                    
+                                
+                                    <div class="row">
+                                        <div class="col-sm-9 col-12"  style="margin-top: 10px;">
+                                            <h6>Nome:</h6> <br>
+                                            <input type="text" id="newBoardText"  maxlength="15" class="form-control"  required style=" height: 50px;">
+                                        </div>
+
+                                        <div class="col-sm-3 col-6" style="margin-top: 10px;">
+                                            <h6>Color:</h6> <br>
+                                            <input type="color" id="newBoardColor" list="presetColors"  class="form-control" required  style=" height: 50px;">
+                                            <datalist id="presetColors">
+                                                <option>##0079BF</option>
+                                                <option>#D29034</option>
+                                                <option>#519839</option>
+                                                <option>#B04632</option>
+                                                <option>#89609E</option>
+                                                <option>#CD5A91</option>
+                                                <option>#4BBF6B</option>
+                                                <option>#00AECC</option>
+                                                <option>#838C91</option>
+                                            </datalist>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                    <button type="submit" class="btn btn-success" id="btnAdicionarBoard"> Adicionar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

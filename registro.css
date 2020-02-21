@@ -1,0 +1,41 @@
+.corpo{
+    margin-top: 150px;
+}
+
+.textCadastro{
+    margin-bottom: -20px;
+}
+
+.btnCadas{
+    width: 100%;
+}
+
+input{
+    height: 50px;
+}
+
+
+.navbar{ 
+    background:#0079bf;
+}
+
+.nav-link , .navbar-brand{
+     color: #f4f4f4 !important;
+     border-radius: 5px;
+}
+
+.nav-link{ 
+    margin-right: 1em !important;
+}
+
+.nav-link:hover , .navbar-brand:hover{ 
+    background: #f4f4f4; color: #0079bf !important; 
+    
+}
+
+.navbar-collapse{ 
+    justify-content: flex-end;
+}
+.navbar-toggler{  
+    background:#fff !important;
+}

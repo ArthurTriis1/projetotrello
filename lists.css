@@ -1,0 +1,133 @@
+.navbar{ 
+    background:#0079bf;
+}
+
+.nav-link , .navbar-brand{
+     color: #f4f4f4 !important;
+     border-radius: 5px;
+}
+
+.nav-link{ 
+    margin-right: 1em !important;
+}
+
+.nav-link:hover , .navbar-brand:hover{ 
+    background: #f4f4f4; color: #0079bf !important; 
+    
+}
+
+.navbar-collapse{ 
+    justify-content: flex-end;
+}
+.navbar-toggler{  
+    background:#fff !important;
+}
+
+body{
+    background-color: rgb(168, 168, 255);
+    max-width: 100vw;
+}
+
+
+.corpo{
+    
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center; 
+    position: relative;
+    top: 50px;
+    height: fit-content;
+}
+
+.nomeBoard{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.invisible-add{
+    display: none;
+    
+}
+
+.bcblue{
+    background-color: rgb(20, 70, 238);
+    transition: all 1s;
+}
+
+
+
+
+.corpoLists{
+    padding: 10px;
+    min-height: 85vh;
+    background-color: rgba(163, 30, 30, 0);
+    position: relative;
+    top: 60px;
+    display:flex;
+     flex-direction:row;
+      
+    
+}
+
+.card-item:hover{
+    background-color: rgba(214, 214, 214, 0.87);
+    cursor: pointer;
+}
+
+.list{
+    
+    margin: 10px;
+    min-width: 18em;
+    height: fit-content;
+
+}
+
+.nav-name-board{
+    background-color: rgb(19, 68, 158);
+    padding: 5px;
+    position: fixed;
+    z-index: 100;
+}
+
+.delet-card:hover{
+    color: rgb(173, 0, 0);
+    font-weight: bold;
+}
+
+.tag{
+    
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.192);
+}
+
+.tag:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.tag-off{
+    opacity: 0.3;
+    border: 1px solid white;
+}
+
+@media (max-width: 635px) {
+    .list{
+        width: 80%;
+    
+    }
+
+    .corpoLists{
+        flex-wrap: wrap; 
+      justify-content: space-around;
+      top: 90px;
+    }
+}
+
+
+.optionList:hover{
+    color: rgb(55, 55, 180);
+    font-weight: bold;
+    cursor: pointer;
+}
